@@ -1,15 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thomas MacMillan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
 <main class="layout">
+  <!-- Main content -->
   <div class="content">
     <h1>Thomas MacMillan</h1>
 
+    <!-- About tab content -->
     <div class="tab-content active" id="about">
       <p>Composer & guitarist — Berlin</p>
       <br>
       <p>
         Melodic, atmospheric solo acoustic guitar music
         exploring liminal and ambient spaces.
-      </p> <br><br>
-
+      </p>
+      <br><br>
       <p class="music-links">
         <a href="https://thomasmacmillan.bandcamp.com" target="_blank">BANDCAMP</a>
         <a href="https://www.instagram.com/tom.macmillan" target="_blank">INSTAGRAM</a>
@@ -18,10 +29,12 @@
       </p>
     </div>
 
+    <!-- Gallery tab content -->
     <div class="tab-content" id="gallery">
       <p>Gallery content: images, scores, videos...</p>
     </div>
 
+    <!-- Contact tab content -->
     <div class="tab-content" id="contact">
       <p><a href="mailto:macmillan11@msn.com">macmillan11@msn.com</a></p>
     </div>
@@ -34,3 +47,24 @@
     <button class="tab-button" data-tab="contact">Contact</button>
   </div>
 </main>
+
+<!-- Tab-switching JavaScript -->
+<script>
+  const buttons = document.querySelectorAll(".tab-button");
+  const contents = document.querySelectorAll(".tab-content");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      buttons.forEach(b => b.classList.remove("active"));
+      button.classList.add("active");
+
+      const tab = button.dataset.tab;
+      contents.forEach(c => {
+        c.classList.toggle("active", c.id === tab);
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
