@@ -150,12 +150,13 @@ a:hover {
 }
 
 .gallery img {
-  max-width: 100%;
-  width: 250px;
-  height: auto;
+  max-width: 100%;   /* never exceed container width */
+  width: 250px;      /* default display width */
+  height: auto;      /* keep aspect ratio */
   border: 2px solid #ccc;
   border-radius: 4px;
   transition: transform 0.2s ease, border-color 0.2s ease;
+  object-fit: cover; /* optional: crop to fit box if needed */
 }
 
 .gallery img:hover {
@@ -163,8 +164,10 @@ a:hover {
   border-color: #fff;
 }
 
+/* Make images smaller on mobile */
 @media (max-width: 600px) {
   .gallery img {
-    width: 100%; /* full width on small screens */
+    width: 100%;  /* take full width on narrow screens */
   }
 }
+
