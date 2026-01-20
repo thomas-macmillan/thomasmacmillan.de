@@ -36,9 +36,10 @@ a:hover {
 }
 
 body {
-  font-family: "VCR OSD Mono", monospace;
+  font-family: "VCR OSD Mono" !important;
   background: #111;
   color: #eee;
   margin: 0;
+  font-size: 20px;
 }
 
