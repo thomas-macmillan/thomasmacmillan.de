@@ -12,14 +12,14 @@
    Base layout & typography
 -------------------------- */
 body {
-  font-family: "VCR OSD Mono", monospace;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif; /* more readable body font */
   background: #111;
   color: #eee;
   margin: 0;
 
-  font-size: 19px;        /* comfortable reading size */
-  line-height: 1.75;      /* breathing room between lines */
-  letter-spacing: 0.05em; /* slightly wider than default */
+  font-size: 20px;        /* comfortable reading */
+  line-height: 1.8;
+  letter-spacing: 0.03em; /* subtle spacing for readability */
 }
 
 main {
@@ -32,15 +32,17 @@ main {
    Headings
 -------------------------- */
 h1 {
-  font-size: 2.4rem;      /* prominent but not giant */
+  font-family: "VCR OSD Mono", monospace; /* VCR only for headings */
+  font-size: 1.8rem;     /* visually balanced */
   margin-bottom: 0.4em;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
 }
 
 h2 {
-  font-size: 1.4rem;      /* noticeable hierarchy, readable */
+  font-family: "VCR OSD Mono", monospace;
+  font-size: 1.3rem;     /* visually proportional to H1 */
   margin-top: 2em;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
 }
 
 /* -------------------------
