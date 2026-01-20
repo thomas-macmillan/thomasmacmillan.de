@@ -107,6 +107,7 @@ a:hover {
   flex-direction: column;
   gap: 1em;
   min-width: 200px;   /* wider than before */
+  margin-left: 40px;  /* pushes the tabs further to the right */
 }
 
 .tab-button {
