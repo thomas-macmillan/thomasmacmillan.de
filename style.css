@@ -11,15 +11,17 @@
 /* -------------------------
    Base layout & typography
 -------------------------- */
-body {
+body, p, h1, h2, a {
   font-family: "VCR OSD Mono", monospace;
-  background: #111;
   color: #eee;
-  margin: 0;
+}
 
-  font-size: 20px;        /* comfortable size for body */
-  line-height: 1.75;      /* breathing space */
-  letter-spacing: 0.06em; /* slightly wider for readability */
+body {
+  background: #111;
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.75;
+  letter-spacing: 0.06em;
 }
 
 main {
@@ -32,15 +34,15 @@ main {
    Headings
 -------------------------- */
 h1 {
-  font-size: 2rem;        /* visually balanced */
+  font-size: 2rem;
   margin-bottom: 0.4em;
-  letter-spacing: 0.04em; /* tighter for headings */
+  letter-spacing: 0.04em;
 }
 
 h2 {
-  font-size: 1.4rem;      /* visually proportional */
+  font-size: 1.4rem;
   margin-top: 2em;
-  letter-spacing: 0.05em; /* slightly tighter than body */
+  letter-spacing: 0.05em;
 }
 
 /* -------------------------
@@ -63,23 +65,14 @@ a:hover {
   color: #fff;
 }
 
-body, p, h1, h2, a {
-  font-family: "VCR OSD Mono", monospace;
-}
-
-/* Music links all on one line, minimal spacing */
+/* -------------------------
+   Music links
+-------------------------- */
 .music-links {
-  margin: 0;          /* removes paragraph spacing */
+  margin: 0;
   padding: 0;
 }
 
 .music-links a {
-  margin-right: 1em;  /* small space between links */
-  text-decoration: none;
-  color: #ccc;
+  margin-right: 1em;
 }
-
-.music-links a:hover {
-  color: #fff;
-}
-
