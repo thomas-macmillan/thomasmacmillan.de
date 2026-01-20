@@ -69,10 +69,10 @@ a:hover {
    Music links
 -------------------------- */
 .music-links a {
-  display: inline-block;       /* allows padding + border */
-  padding: 0.3em 0.8em;        /* vertical + horizontal padding */
-  margin-right: 0.8em;         /* space between boxes */
-  border: 1px solid #ccc;      /* the box outline */
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  margin-right: 0.8em;
+  border: 1px solid #ccc;
   text-decoration: none;
   color: #ccc;
   font-family: "VCR OSD Mono", monospace;
@@ -81,7 +81,8 @@ a:hover {
 }
 
 .music-links a:hover {
-  color: #111;                 /* text color on hover */
-  background: #ccc;            /* fill on hover */
-  border-color: #fff;          /* optional highlight */
+  color: #111;
+  background: #ccc;
+  border-color: #fff;
 }
+
