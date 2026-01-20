@@ -62,3 +62,8 @@ a {
 a:hover {
   color: #fff;
 }
+
+body, p, h1, h2, a {
+  font-family: "VCR OSD Mono", monospace;
+}
+
