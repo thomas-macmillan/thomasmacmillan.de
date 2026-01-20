@@ -12,7 +12,7 @@
    Base layout & typography
 -------------------------- */
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif; /* more readable body font */
+  font-family: "VCR OSD Mono";
   background: #111;
   color: #eee;
   margin: 0;
