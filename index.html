@@ -1,38 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Thomas MacMillan</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <main>
+<main class="layout">
+  <div class="content">
     <h1>Thomas MacMillan</h1>
-    <p>Composer & Guitarist — Berlin</p>
-    <br>
-     <p>
-    Melodic, atmospheric solo acoustic guitar music
-    exploring liminal and ambient spaces.
-  </p>
-<br><br>
-  <p class="music-links">
-    <a href="https://thomasmacmillan.bandcamp.com" target="_blank">BANDCAMP</a>
-    <a href="https://www.instagram.com/tom.macmillan" target="_blank">INSTAGRAM</a>
-    <a href="https://www.tiktok.com/@tommacmillan0" target="_blank">TIKTOK</a>
-    <a href="https://www.youtube.com/@thomasmacmillan" target="_blank">YOUTUBE</a>
-  </p>
-</section>
-<br><br>
-    <section>
-      <h2>Contact</h2>
-      <p>
-        <a href="mailto:macmillan11@msn.com">
-          macmillan11@msn.com
-        </a>
-      </p>
-    </section>
-  </main>
 
-</body>
-</html>
+    <div class="tab-content active" id="about">
+      <p>Composer & guitarist — Berlin</p>
+      <br>
+      <p>
+        Melodic, atmospheric solo acoustic guitar music
+        exploring liminal and ambient spaces.
+      </p> <br><br>
+
+      <p class="music-links">
+        <a href="https://thomasmacmillan.bandcamp.com" target="_blank">BANDCAMP</a>
+        <a href="https://www.instagram.com/tom.macmillan" target="_blank">INSTAGRAM</a>
+        <a href="https://www.tiktok.com/@tommacmillan0" target="_blank">TIKTOK</a>
+        <a href="https://www.youtube.com/@thomasmacmillan" target="_blank">YOUTUBE</a>
+      </p>
+    </div>
+
+    <div class="tab-content" id="gallery">
+      <p>Gallery content: images, scores, videos...</p>
+    </div>
+
+    <div class="tab-content" id="contact">
+      <p><a href="mailto:macmillan11@msn.com">macmillan11@msn.com</a></p>
+    </div>
+  </div>
+
+  <!-- Sidebar tabs -->
+  <div class="tabs">
+    <button class="tab-button active" data-tab="about">About</button>
+    <button class="tab-button" data-tab="gallery">Gallery</button>
+    <button class="tab-button" data-tab="contact">Contact</button>
+  </div>
+</main>
