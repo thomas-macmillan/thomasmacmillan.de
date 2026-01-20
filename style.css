@@ -17,9 +17,9 @@ body {
   color: #eee;
   margin: 0;
 
-  font-size: 20px;        /* slightly larger than before */
-  line-height: 1.8;       /* more breathing space between lines */
-  letter-spacing: 0.05em; /* slightly wider spacing */
+  font-size: 19px;        /* comfortable reading size */
+  line-height: 1.75;      /* breathing room between lines */
+  letter-spacing: 0.05em; /* slightly wider than default */
 }
 
 main {
@@ -32,15 +32,15 @@ main {
    Headings
 -------------------------- */
 h1 {
-  font-size: 3rem;        /* larger, still reasonable */
-  margin-bottom: 0.5em;
-  letter-spacing: 0.08em; /* wider spacing for headings */
+  font-size: 2.4rem;      /* prominent but not giant */
+  margin-bottom: 0.4em;
+  letter-spacing: 0.06em;
 }
 
 h2 {
-  font-size: 1.5rem;      /* larger, still readable */
-  margin-top: 2.2em;
-  letter-spacing: 0.06em;
+  font-size: 1.4rem;      /* noticeable hierarchy, readable */
+  margin-top: 2em;
+  letter-spacing: 0.05em;
 }
 
 /* -------------------------
