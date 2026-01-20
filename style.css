@@ -12,14 +12,14 @@
    Base layout & typography
 -------------------------- */
 body {
-  font-family: "VCR OSD Mono";
+  font-family: "VCR OSD Mono", monospace;
   background: #111;
   color: #eee;
   margin: 0;
 
-  font-size: 20px;        /* comfortable reading */
-  line-height: 1.8;
-  letter-spacing: 0.03em; /* subtle spacing for readability */
+  font-size: 20px;        /* comfortable size for body */
+  line-height: 1.75;      /* breathing space */
+  letter-spacing: 0.06em; /* slightly wider for readability */
 }
 
 main {
@@ -32,21 +32,19 @@ main {
    Headings
 -------------------------- */
 h1 {
-  font-family: "VCR OSD Mono", monospace; /* VCR only for headings */
-  font-size: 1.8rem;     /* visually balanced */
+  font-size: 2rem;        /* visually balanced */
   margin-bottom: 0.4em;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em; /* tighter for headings */
 }
 
 h2 {
-  font-family: "VCR OSD Mono", monospace;
-  font-size: 1.3rem;     /* visually proportional to H1 */
+  font-size: 1.4rem;      /* visually proportional */
   margin-top: 2em;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em; /* slightly tighter than body */
 }
 
 /* -------------------------
-   Text
+   Paragraphs
 -------------------------- */
 p {
   max-width: 60ch;
