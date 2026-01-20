@@ -67,3 +67,19 @@ body, p, h1, h2, a {
   font-family: "VCR OSD Mono", monospace;
 }
 
+/* Music links all on one line, minimal spacing */
+.music-links {
+  margin: 0;          /* removes paragraph spacing */
+  padding: 0;
+}
+
+.music-links a {
+  margin-right: 1em;  /* small space between links */
+  text-decoration: none;
+  color: #ccc;
+}
+
+.music-links a:hover {
+  color: #fff;
+}
+
