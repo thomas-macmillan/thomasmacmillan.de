@@ -104,23 +104,23 @@ a:hover {
 -------------------------- */
 .tabs {
   display: flex;
-  flex-direction: column;    /* stack vertically */
-  gap: 1em;                  /* space between tabs */
-  min-width: 150px;          /* ensure enough width for text */
+  flex-direction: column;
+  gap: 1em;
+  min-width: 200px;   /* wider than before */
 }
 
-/* Tab buttons */
 .tab-button {
-  padding: 1em 1.5em;        /* larger clickable area */
-  font-size: 1.3rem;         /* bigger text */
+  padding: 1.5em 2em;      /* bigger click area */
+  font-size: 1.6rem;       /* noticeably bigger text */
   font-family: "VCR OSD Mono", monospace;
-  background: #111;           /* match body background */
-  border: 2px solid #ccc;    /* visible border */
+  background: #111;
+  border: 2px solid #ccc;
   color: #ccc;
   cursor: pointer;
-  text-align: left;           /* left-align text */
+  text-align: left;
   transition: all 0.2s ease;
 }
+
 
 /* Hover effect */
 .tab-button:hover {
