@@ -1,7 +1,6 @@
 /* -------------------------
    Custom font
 -------------------------- */
-
 @font-face {
   font-family: "VCR OSD Mono";
   src: url("/assets/fonts/VCR_OSD_MONO_1.001.ttf") format("truetype");
@@ -12,16 +11,15 @@
 /* -------------------------
    Base layout & typography
 -------------------------- */
-
 body {
   font-family: "VCR OSD Mono", monospace;
   background: #111;
   color: #eee;
   margin: 0;
 
-  font-size: 25px;
-  line-height: 1.7;
-  letter-spacing: 0.08em;
+  font-size: 20px;        /* slightly larger than before */
+  line-height: 1.8;       /* more breathing space between lines */
+  letter-spacing: 0.05em; /* slightly wider spacing */
 }
 
 main {
@@ -33,32 +31,29 @@ main {
 /* -------------------------
    Headings
 -------------------------- */
-
 h1 {
-  font-size: 8rem;
-  margin-bottom: 0.4em;
-  letter-spacing: 0.09em;
+  font-size: 3rem;        /* larger, still reasonable */
+  margin-bottom: 0.5em;
+  letter-spacing: 0.08em; /* wider spacing for headings */
 }
 
 h2 {
-  font-size: 8rem;
+  font-size: 1.5rem;      /* larger, still readable */
   margin-top: 2.2em;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.06em;
 }
 
 /* -------------------------
    Text
 -------------------------- */
-
 p {
   max-width: 60ch;
-  margin-bottom: 1.3em;
+  margin-bottom: 1.4em;
 }
 
 /* -------------------------
    Links
 -------------------------- */
-
 a {
   color: #ccc;
   text-decoration: none;
