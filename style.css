@@ -88,3 +88,74 @@ a:hover {
   border-color: #fff;
 }
 
+/* Layout: main content + right sidebar */
+.layout {
+  display: flex;
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+  gap: 2em;
+}
+
+/* Main content area */
+.content {
+  flex: 1;
+}
+
+/* Sidebar tabs */
+.tabs {
+  display: flex;
+  flex-direction: column;   /* vertical stack */
+  gap: 0.5em;
+}
+
+/* Tab buttons */
+.tab-button {
+  padding: 0.5em 1em;
+  background: #111;
+  border: 1px solid #ccc;
+  color: #ccc;
+  font-family: "VCR OSD Mono", monospace;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.tab-button:hover {
+  background: #ccc;
+  color: #111;
+}
+
+.tab-button.active {
+  background: #ccc;
+  color: #111;
+}
+
+/* Tab content */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Music links boxed */
+.music-links a {
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  margin-right: 0.8em;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  color: #ccc;
+  font-family: "VCR OSD Mono", monospace;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.music-links a:hover {
+  color: #111;
+  background: #ccc;
+  border-color: #fff;
+}
+
