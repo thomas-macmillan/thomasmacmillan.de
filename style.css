@@ -24,13 +24,6 @@ body {
   letter-spacing: 0.06em;
 }
 
-.counter {
-  font-size: 0.9rem;
-  color: #888;
-  margin-top: 3em;
-  letter-spacing: 0.1em;
-}
-
 body, p, h1, h2, a, .tab-button {
   font-family: "VCR OSD Mono", monospace;
 }
