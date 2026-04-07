@@ -173,3 +173,25 @@ a:hover {
     column-count: 1;
   }
 }
+
+.release-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.release-grid a {
+  text-decoration: none;
+  color: white;
+  width: 200px;
+}
+
+.release-grid img {
+  width: 100%;
+  height: auto;
+}
+
+.release-grid p {
+  margin-top: 8px;
+  font-size: 14px;
+}
