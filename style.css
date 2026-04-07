@@ -19,8 +19,8 @@ body {
   margin: 0;
   background: #111;
   min-height: 100vh;
-  font-size: 20px;
-  line-height: 1.75;
+  font-size: 24px;  /* Increased from 20px */
+  line-height: 1.8;
   letter-spacing: 0.06em;
 }
 
@@ -33,10 +33,27 @@ body, p, h1, h2, a, .tab-button {
 -------------------------- */
 main.layout {
   display: flex;
-  max-width: 900px;
-  margin: 80px auto;
-  padding: 0 20px;
-  gap: 2em;
+  flex-direction: column;  /* Changed for better mobile-first */
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 40px;
+  gap: 3em;
+}
+
+/* On desktop, put tabs back on the right */
+@media (min-width: 768px) {
+  main.layout {
+    flex-direction: row;
+  }
+  
+  .tabs {
+    order: 2;
+    min-width: 200px;
+  }
+  
+  .content {
+    order: 1;
+  }
 }
 
 /* Main content area */
@@ -48,13 +65,13 @@ main.layout {
    Headings
 -------------------------- */
 h1 {
-  font-size: 2rem;
-  margin-bottom: 0.4em;
+  font-size: 3rem;  /* Increased from 2rem */
+  margin-bottom: 0.5em;
   letter-spacing: 0.04em;
 }
 
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.8rem;  /* Increased from 1.4rem */
   margin-top: 2em;
   letter-spacing: 0.05em;
 }
@@ -63,8 +80,9 @@ h2 {
    Paragraphs
 -------------------------- */
 p {
-  max-width: 60ch;
-  margin-bottom: 1.4em;
+  max-width: 65ch;
+  margin-bottom: 1.5em;
+  font-size: 1.1rem;
 }
 
 /* -------------------------
@@ -80,32 +98,36 @@ a:hover {
 }
 
 /* -------------------------
-   Music links boxed
+   Music links (Icon buttons)
 -------------------------- */
+.music-links {
+  margin-top: 2em;
+}
+
 .music-links a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
-  padding: 0;
-  margin-right: 0.8em;
-  border: 1px solid #ccc;
+  width: 60px;  /* Larger buttons */
+  height: 60px;
+  margin-right: 1em;
+  border: 2px solid #ccc;  /* Thicker border */
   text-decoration: none;
   color: #ccc;
-  font-size: 1.8rem;
+  font-size: 2rem;
   transition: all 0.2s ease;
-  border-radius: 4px;
+  border-radius: 8px;  /* Slightly rounded */
 }
 
 .music-links a:hover {
   color: #111;
   background: #ccc;
   border-color: #fff;
+  transform: scale(1.05);  /* Slight grow effect */
 }
 
 .music-links i {
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 
 /* -------------------------
@@ -113,27 +135,46 @@ a:hover {
 -------------------------- */
 .tabs {
   display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-  min-width: 150px;
+  flex-direction: row;  /* Horizontal on mobile */
+  flex-wrap: wrap;
+  gap: 0.8em;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+@media (min-width: 768px) {
+  .tabs {
+    flex-direction: column;
+    gap: 0.8em;
+    min-width: 200px;
+    margin-bottom: 0;
+  }
 }
 
 .tab-button {
-  padding: 0.5em 1em;
-  font-size: 1rem;
+  padding: 0.8em 1.5em;  /* Larger padding */
+  font-size: 1.1rem;  /* Larger text */
   font-family: "VCR OSD Mono", monospace;
   background: #111;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;  /* Thicker border */
   color: #ccc;
   cursor: pointer;
-  text-align: left;
+  text-align: center;
   transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+  .tab-button {
+    text-align: left;
+  }
 }
 
 .tab-button:hover {
   background: #ccc;
   color: #111;
   border-color: #fff;
+  transform: translateX(4px);  /* Slight movement on hover */
 }
 
 .tab-button.active {
@@ -151,23 +192,26 @@ a:hover {
   display: block;
 }
 
+/* -------------------------
+   Gallery
+-------------------------- */
 .gallery {
   column-count: 2;
-  column-gap: 1em;
-  margin-top: 1em;
+  column-gap: 1.5em;
+  margin-top: 1.5em;
 }
 
 .gallery a {
   display: inline-block;
   width: 100%;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 
 .gallery img {
   width: 100%;
   height: auto;
   border: 2px solid #ccc;
-  border-radius: 4px;
+  border-radius: 8px;
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
@@ -184,51 +228,74 @@ a:hover {
 }
 
 /* -------------------------
-   Release grid (Music tab) - FIXED
+   Release grid (Music tab)
 -------------------------- */
 .release-grid {
   display: flex;
-  gap: 40px;
+  gap: 50px;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 1.5em;
 }
 
 .release-grid a {
   text-decoration: none;
   color: white;
-  width: 200px;
+  width: 260px;  /* Larger */
   display: block;
+  transition: transform 0.2s ease;
+}
+
+.release-grid a:hover {
+  transform: translateY(-5px);  /* Lift effect on hover */
 }
 
 .release-grid img {
-  width: 200px;
+  width: 260px;
   height: auto;
   max-width: 100%;
   display: block;
-  border: 1px solid #333;
+  border: 2px solid #ccc;
+  border-radius: 8px;
 }
 
 .release-grid p {
-  margin-top: 8px;
-  font-size: 14px;
+  margin-top: 12px;
+  font-size: 1rem;
   text-align: center;
 }
 
 /* Mobile adjustment */
 @media (max-width: 600px) {
   .release-grid {
-    gap: 20px;
+    gap: 40px;
     justify-content: center;
   }
   
   .release-grid a {
-    width: 140px;
+    width: 200px;
   }
   
   .release-grid img {
-    width: 140px;
+    width: 200px;
   }
   
   .release-grid p {
-    font-size: 11px;
+    font-size: 0.9rem;
   }
+}
+
+/* -------------------------
+   Contact
+-------------------------- */
+#contact p {
+  font-size: 1.2rem;
+}
+
+#contact a {
+  border-bottom: 1px dotted #ccc;
+}
+
+#contact a:hover {
+  border-bottom: 1px solid #fff;
 }
