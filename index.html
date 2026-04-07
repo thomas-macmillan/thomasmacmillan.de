@@ -130,6 +130,17 @@
 <script>
   const buttons = document.querySelectorAll(".tab-button");
   const contents = document.querySelectorAll(".tab-content");
+  const mainHeading = document.querySelector("h1");
+
+  // Define titles for each tab
+  const tabTitles = {
+    home: "Thomas MacMillan",
+    about: "About — Thomas MacMillan",
+    concerts: "Concerts — Thomas MacMillan",
+    music: "Music — Thomas MacMillan",
+    gallery: "Gallery — Thomas MacMillan",
+    contact: "Contact — Thomas MacMillan"
+  };
 
   buttons.forEach(button => {
     button.addEventListener("click", () => {
@@ -140,6 +151,24 @@
       contents.forEach(c => {
         c.classList.toggle("active", c.id === tab);
       });
+
+      // Change the page title (browser tab)
+      document.title = tabTitles[tab];
+      
+      // Optional: Change the main H1 heading too
+      if (tab === "home") {
+        mainHeading.textContent = "Thomas MacMillan";
+      } else if (tab === "about") {
+        mainHeading.textContent = "About";
+      } else if (tab === "concerts") {
+        mainHeading.textContent = "Concerts";
+      } else if (tab === "music") {
+        mainHeading.textContent = "Music";
+      } else if (tab === "gallery") {
+        mainHeading.textContent = "Gallery";
+      } else if (tab === "contact") {
+        mainHeading.textContent = "Contact";
+      }
     });
   });
 </script>
