@@ -301,10 +301,10 @@ a:hover {
 }
 
 /* -------------------------
-   Very Subtle VHS Effect
+   Noticeable VHS Effect
 -------------------------- */
 
-/* Extremely subtle static */
+/* Static noise overlay */
 body::before {
   content: "";
   position: fixed;
@@ -316,24 +316,15 @@ body::before {
   z-index: 1;
   background: repeating-linear-gradient(
     0deg,
-    rgba(255, 255, 255, 0.02) 0px,
-    rgba(255, 255, 255, 0.02) 1px,
+    rgba(255, 255, 255, 0.04) 0px,
+    rgba(255, 255, 255, 0.04) 1px,
     transparent 1px,
-    transparent 3px
+    transparent 2px
   );
-  animation: subtleMove 12s linear infinite;
+  animation: staticFlicker 0.3s steps(3) infinite;
 }
 
-@keyframes subtleMove {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(3px);
-  }
-}
-
-/* Very soft vignette */
+/* Scanlines moving up */
 body::after {
   content: "";
   position: fixed;
@@ -343,5 +334,47 @@ body::after {
   height: 100%;
   pointer-events: none;
   z-index: 1;
-  background: radial-gradient(ellipse at center, transparent 50%, rgba(0, 0, 0, 0.3) 100%);
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.1) 0px,
+    rgba(0, 0, 0, 0.1) 2px,
+    transparent 2px,
+    transparent 6px
+  );
+  animation: scanlinesMove 8s linear infinite;
+}
+
+/* Subtle flicker animation */
+@keyframes staticFlicker {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+/* Scanlines moving up */
+@keyframes scanlinesMove {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+/* Soft vignette (darkened edges) */
+.vhs-vignette {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  background: radial-gradient(ellipse at center, transparent 50%, rgba(0, 0, 0, 0.5) 100%);
 }
