@@ -19,9 +19,10 @@ body {
   margin: 0;
   background: #111;
   min-height: 100vh;
-  font-size: 24px;  /* Increased from 20px */
+  font-size: 24px;
   line-height: 1.8;
   letter-spacing: 0.06em;
+  position: relative;  /* Added for VHS effect */
 }
 
 body, p, h1, h2, a, .tab-button {
@@ -33,7 +34,7 @@ body, p, h1, h2, a, .tab-button {
 -------------------------- */
 main.layout {
   display: flex;
-  flex-direction: column;  /* Changed for better mobile-first */
+  flex-direction: column;
   max-width: 1200px;
   margin: 60px auto;
   padding: 0 40px;
@@ -65,13 +66,13 @@ main.layout {
    Headings
 -------------------------- */
 h1 {
-  font-size: 3rem;  /* Increased from 2rem */
+  font-size: 3rem;
   margin-bottom: 0.5em;
   letter-spacing: 0.04em;
 }
 
 h2 {
-  font-size: 1.8rem;  /* Increased from 1.4rem */
+  font-size: 1.8rem;
   margin-top: 2em;
   letter-spacing: 0.05em;
 }
@@ -108,22 +109,22 @@ a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 60px;  /* Larger buttons */
+  width: 60px;
   height: 60px;
   margin-right: 1em;
-  border: 2px solid #ccc;  /* Thicker border */
+  border: 2px solid #ccc;
   text-decoration: none;
   color: #ccc;
   font-size: 2rem;
   transition: all 0.2s ease;
-  border-radius: 8px;  /* Slightly rounded */
+  border-radius: 8px;
 }
 
 .music-links a:hover {
   color: #111;
   background: #ccc;
   border-color: #fff;
-  transform: scale(1.05);  /* Slight grow effect */
+  transform: scale(1.05);
 }
 
 .music-links i {
@@ -135,7 +136,7 @@ a:hover {
 -------------------------- */
 .tabs {
   display: flex;
-  flex-direction: row;  /* Horizontal on mobile */
+  flex-direction: row;
   flex-wrap: wrap;
   gap: 0.8em;
   justify-content: center;
@@ -152,11 +153,11 @@ a:hover {
 }
 
 .tab-button {
-  padding: 0.8em 1.5em;  /* Larger padding */
-  font-size: 1.1rem;  /* Larger text */
+  padding: 0.8em 1.5em;
+  font-size: 1.1rem;
   font-family: "VCR OSD Mono", monospace;
   background: #111;
-  border: 2px solid #ccc;  /* Thicker border */
+  border: 2px solid #ccc;
   color: #ccc;
   cursor: pointer;
   text-align: center;
@@ -174,7 +175,7 @@ a:hover {
   background: #ccc;
   color: #111;
   border-color: #fff;
-  transform: translateX(4px);  /* Slight movement on hover */
+  transform: translateX(4px);
 }
 
 .tab-button.active {
@@ -241,13 +242,13 @@ a:hover {
 .release-grid a {
   text-decoration: none;
   color: white;
-  width: 260px;  /* Larger */
+  width: 260px;
   display: block;
   transition: transform 0.2s ease;
 }
 
 .release-grid a:hover {
-  transform: translateY(-5px);  /* Lift effect on hover */
+  transform: translateY(-5px);
 }
 
 .release-grid img {
@@ -304,23 +305,6 @@ a:hover {
    VHS Effect - Background Only
 -------------------------- */
 
-/* Add position relative to body */
-body {
-  position: relative;
-}
-
-/* Create a background wrapper for the effect */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #111; /* Solid dark background */
-  z-index: -2; /* Push behind everything */
-}
-
 /* Moving scanlines - background only */
 .scanlines {
   position: fixed;
@@ -329,7 +313,7 @@ body::before {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: -1; /* Behind content, but above the solid background */
+  z-index: -1;
   background: repeating-linear-gradient(
     0deg,
     transparent 0px,
