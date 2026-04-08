@@ -158,11 +158,15 @@ body {
   display: block;
 }
 
-/* -------------------------
-   Home tab content
--------------------------- */
+/* Home tab content - centered to align with hero image */
+#home {
+  text-align: center;
+}
+
 #home p {
   max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 1.5em;
 }
 
@@ -309,11 +313,29 @@ body {
     padding: 1rem;
   }
   
+  /* Mobile: Name on the left, social icons on the right */
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .header-left {
+    display: none;  /* Hide the empty spacer div on mobile */
+  }
+  
   .site-logo {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    margin: 0;
+    position: static;
+    transform: none;
   }
   
   .social-icons {
+    position: static;
+    transform: none;
     gap: 0.8rem;
   }
   
@@ -335,9 +357,14 @@ body {
     font-size: 0.7rem;
   }
   
-.main-content {
-    margin: 240px auto 40px auto;  /* Changed from 190px to 240px */
+  .main-content {
+    margin: 240px auto 40px auto;
     padding: 0 1rem;
+  }
+  
+  /* Home text on mobile - still centered */
+  #home p {
+    text-align: center;
   }
 }
 
