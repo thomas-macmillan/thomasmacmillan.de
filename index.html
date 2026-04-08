@@ -12,7 +12,7 @@
   <!-- Fixed Header with Logo and Social Icons -->
   <header class="site-header">
     <div class="header-container">
-      <div style="flex:1;"></div> <!-- Left spacer to push logo to center -->
+      <div class="header-left"></div>  <!-- Empty div to balance the right column -->
       <a href="#" class="site-logo" id="logo-home">Thomas MacMillan</a>
       <div class="social-icons">
         <a href="https://thomasmacmillan.bandcamp.com" target="_blank"><i class="fab fa-bandcamp"></i></a>
@@ -37,9 +37,7 @@
 
   <!-- Main Content -->
   <main class="main-content">
-    <!-- Home tab content -->
     <div class="tab-content active" id="home">
-      <!-- Home page text FIRST (moved above hero image) -->
       <p>Composer & Guitarist — Berlin</p>
       <br>
       <p>
@@ -47,15 +45,12 @@
         exploring liminal and ambient spaces.
       </p>
       <br>
-      <!-- Hero Image BELOW the text -->
       <div class="hero-image">
         <img src="assets/images/your-photo.jpg" alt="Thomas MacMillan">
       </div>
-      <!-- Photo credit added below hero image -->
       <p style="text-align: right; font-size: 0.8rem; color: #666;">Photo: Nora Amparo</p>
     </div>
 
-    <!-- About tab content -->
     <div class="tab-content" id="about">
       <div class="about-text">
         <p>Originally from the remote Pennine region of Northern England, composer and guitarist Thomas MacMillan has been an active force in Berlin's independent music scene since 2018. Alongside performing with his alt-rock project Carnivalesque and collaborating with art-rock icon Kat Koan, he writes music for solo guitar.</p>
@@ -63,7 +58,6 @@
       </div>
     </div>
 
-    <!-- Concerts tab -->
     <div class="tab-content" id="concerts">
       <p>
         20.4.2026 — DNA House (Wrangelstraße 25, Berlin 10997)<br>
@@ -74,7 +68,6 @@
       </p>
     </div>
 
-    <!-- Music tab -->
     <div class="tab-content" id="music">
       <div class="release-grid">
         <a href="nervous-system.html">
@@ -92,7 +85,6 @@
       </div>
     </div>
 
-    <!-- Gallery tab -->
     <div class="tab-content" id="gallery">
       <p>Photos by Nora Amparo</p>
       <div class="gallery">
@@ -120,24 +112,20 @@
       </div>
     </div>
 
-    <!-- Contact tab -->
     <div class="tab-content" id="contact">
       <p><a href="mailto:macmillan11@msn.com">macmillan11@msn.com</a></p>
     </div>
   </main>
 
-  <!-- VHS effects -->
   <div class="scanlines"></div>
   <div class="static-noise"></div>
   <div class="vignette"></div>
 
-  <!-- Tab-switching JavaScript -->
   <script>
     const buttons = document.querySelectorAll(".tab-button");
     const contents = document.querySelectorAll(".tab-content");
     const logo = document.getElementById('logo-home');
 
-    // Tab switching
     buttons.forEach(button => {
       button.addEventListener("click", () => {
         buttons.forEach(b => b.classList.remove("active"));
@@ -148,13 +136,11 @@
           c.classList.toggle("active", c.id === tab);
         });
 
-        // Update page title
         const tabName = tab.charAt(0).toUpperCase() + tab.slice(1);
         document.title = tab === "home" ? "Thomas MacMillan" : `${tabName} — Thomas MacMillan`;
       });
     });
 
-    // Logo click - return to Home tab
     if (logo) {
       logo.addEventListener('click', (e) => {
         e.preventDefault();
