@@ -166,10 +166,10 @@ body {
   margin-bottom: 1.5em;
 }
 
-/* Hero image */
+/* Hero image - 75% larger */
 .hero-image {
   width: 100%;
-  max-width: 500px;
+  max-width: 875px;  /* Changed from 500px (500 x 1.75 = 875px) */
   margin: 0 auto 0.5rem auto;
 }
 
