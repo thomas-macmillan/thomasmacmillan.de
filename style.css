@@ -130,6 +130,8 @@ body {
   max-width: 1200px;
   margin: 160px auto 60px auto;
   padding: 0 2rem;
+  position: relative;
+  z-index: 2;
 }
 
 /* Tab content */
@@ -142,40 +144,14 @@ body {
 }
 
 /* -------------------------
-   Home tab content (original)
+   Home tab content
 -------------------------- */
 #home p {
   max-width: 65ch;
   margin-bottom: 1.5em;
 }
 
-#home .music-links {
-  margin-top: 2em;
-}
-
-#home .music-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 60px;
-  margin-right: 1em;
-  border: 2px solid #ccc;
-  text-decoration: none;
-  color: #ccc;
-  font-size: 2rem;
-  transition: all 0.2s ease;
-  border-radius: 8px;
-}
-
-#home .music-links a:hover {
-  color: #111;
-  background: #ccc;
-  border-color: #fff;
-  transform: scale(1.05);
-}
-
-/* Hero image - for home page if you want to add it later */
+/* Hero image */
 .hero-image {
   width: 100%;
   max-width: 500px;
@@ -247,7 +223,6 @@ body {
   text-align: center;
 }
 
-/* Mobile adjustment for release grid */
 @media (max-width: 600px) {
   .release-grid a {
     width: 200px;
@@ -360,7 +335,7 @@ body {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: -1;
+  z-index: 0;
   background: repeating-linear-gradient(
     0deg,
     transparent 0px,
@@ -378,7 +353,7 @@ body {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: -1;
+  z-index: 0;
   background: repeating-linear-gradient(
     0deg,
     rgba(255, 255, 255, 0.02) 0px,
@@ -396,7 +371,7 @@ body {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: -1;
+  z-index: 0;
   background: radial-gradient(ellipse at center, transparent 50%, rgba(0, 0, 0, 0.5) 100%);
 }
 
