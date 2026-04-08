@@ -140,10 +140,10 @@ body {
 /* -------------------------
    Main Content
 -------------------------- */
-/* More distance between tabs and page text */
+/* More distance between tabs and page text - INCREASED */
 .main-content {
   max-width: 1200px;
-  margin: 220px auto 60px auto;
+  margin: 280px auto 60px auto;  /* Changed from 220px to 280px */
   padding: 0 2rem;
   position: relative;
   z-index: 2;
@@ -335,8 +335,8 @@ body {
     font-size: 0.7rem;
   }
   
-  .main-content {
-    margin: 190px auto 40px auto;
+.main-content {
+    margin: 240px auto 40px auto;  /* Changed from 190px to 240px */
     padding: 0 1rem;
   }
 }
