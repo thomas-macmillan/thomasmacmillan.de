@@ -6,14 +6,35 @@
   <title>Thomas MacMillan</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    /* Added minimal inline styles to achieve the requested changes */
+    .tabs-nav {
+      border-top: none !important;
+      border-bottom: none !important;
+    }
+    .tab-button {
+      background-color: #e0e0e0;
+      border: 1px solid #ccc;
+      padding: 8px 16px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .tab-button:hover {
+      background-color: #ffffff !important;
+    }
+    .hero-image {
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
 
   <!-- Fixed Header with Logo and Social Icons -->
   <header class="site-header">
     <div class="header-container">
-      <a href="#" class="site-logo" id="logo-home">Thomas MacMillan</a>
-      <div class="social-icons">
+      <div style="flex:1;"></div> <!-- Left spacer -->
+      <a href="#" class="site-logo" id="logo-home" style="margin:0 auto;">Thomas MacMillan</a>
+      <div class="social-icons" style="flex:1; display:flex; justify-content:flex-end;">
         <a href="https://thomasmacmillan.bandcamp.com" target="_blank"><i class="fab fa-bandcamp"></i></a>
         <a href="https://www.instagram.com/tom.macmillan" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://www.tiktok.com/@tommacmillan0" target="_blank"><i class="fab fa-tiktok"></i></a>
@@ -38,16 +59,20 @@
   <main class="main-content">
     <!-- Home tab content -->
     <div class="tab-content active" id="home">
-      <!-- Hero Image -->
-      <div class="hero-image">
-        <img src="assets/images/your-photo.jpg" alt="Thomas MacMillan">
-      </div>
+      <!-- Home page text FIRST (moved above hero image) -->
       <p>Composer & Guitarist — Berlin</p>
       <br>
       <p>
         Melodic, atmospheric solo acoustic guitar music
         exploring liminal and ambient spaces.
       </p>
+      <br>
+      <!-- Hero Image BELOW the text -->
+      <div class="hero-image">
+        <img src="assets/images/your-photo.jpg" alt="Thomas MacMillan">
+      </div>
+      <!-- Photo credit added here -->
+      <p style="text-align: right; font-size: 0.8rem; color: #666;">Photo: Nora Amparo</p>
     </div>
 
     <!-- About tab content -->
