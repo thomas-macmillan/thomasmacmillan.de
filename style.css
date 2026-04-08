@@ -158,13 +158,13 @@ body {
   display: block;
 }
 
-/* Home tab content - centered to align with hero image */
+/* Home tab content - aligned with hero image */
 #home {
   text-align: center;
 }
 
 #home p {
-  max-width: 65ch;
+  max-width: 875px;  /* Match the hero image width */
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5em;
