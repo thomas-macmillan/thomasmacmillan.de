@@ -8,76 +8,76 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
- <div class="scanlines"></div>
-  <div class="static-noise"></div>
-  <div class="vignette"></div>
-<main class="layout">
-  <!-- Main content -->
-  <div class="content">
-    <h1>Thomas MacMillan</h1>
 
+  <!-- Fixed Header with Logo and Social Icons -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#" class="site-logo" id="logo-home">Thomas MacMillan</a>
+      <div class="social-icons">
+        <a href="https://thomasmacmillan.bandcamp.com" target="_blank"><i class="fab fa-bandcamp"></i></a>
+        <a href="https://www.instagram.com/tom.macmillan" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@tommacmillan0" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.youtube.com/@thomasmacmillan" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Tabs -->
+  <nav class="tabs-nav">
+    <div class="tabs-container">
+      <button class="tab-button active" data-tab="home">Home</button>
+      <button class="tab-button" data-tab="about">About</button>
+      <button class="tab-button" data-tab="concerts">Concerts</button>
+      <button class="tab-button" data-tab="music">Music</button>
+      <button class="tab-button" data-tab="gallery">Gallery</button>
+      <button class="tab-button" data-tab="contact">Contact</button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
     <!-- Home tab content (default) -->
     <div class="tab-content active" id="home">
-      <p>Composer & Guitarist — Berlin</p>
-      <br>
-      <p>
-        Melodic, atmospheric solo acoustic guitar music
-        exploring liminal and ambient spaces.
-      </p>
-      <br><br>
-  <p class="music-links">
-  <a href="https://thomasmacmillan.bandcamp.com" target="_blank"><i class="fab fa-bandcamp"></i></a>
-  <a href="https://www.instagram.com/tom.macmillan" target="_blank"><i class="fab fa-instagram"></i></a>
-  <a href="https://www.tiktok.com/@tommacmillan0" target="_blank"><i class="fab fa-tiktok"></i></a>
-  <a href="https://www.youtube.com/@thomasmacmillan" target="_blank"><i class="fab fa-youtube"></i></a>
-</p>
+      <div class="hero-image">
+        <img src="assets/images/your-photo.jpg" alt="Thomas MacMillan">
+      </div>
     </div>
 
     <!-- About tab content -->
     <div class="tab-content" id="about">
-      <p>
-        Originally from the remote Pennine region of Northern England, 
-        composer and guitarist Thomas MacMillan has been an active force 
-        in Berlin's independent music scene since 2018. Alongside performing 
-        with his alt-rock project Carnivalesque and collaborating with 
-        art-rock icon Kat Koan, he writes music for solo guitar.
-      </p>
-      <p>
-        Drawing inspiration from video game composers such as Akira Yamaoka 
-        and Nobuo Uematsu, as well as the niche micro-genre Fogcore, 
-        his forthcoming EP explores liminal spaces, analog horror, and 
-        nostalgia – a sound world that feels both comforting and quietly 
-        unsettling.
-      </p>
+      <div class="about-text">
+        <p>Composer & Guitarist — Berlin</p>
+        <br>
+        <p>Melodic, atmospheric solo acoustic guitar music exploring liminal and ambient spaces.</p>
+        <br><br>
+        <p>Originally from the remote Pennine region of Northern England, composer and guitarist Thomas MacMillan has been an active force in Berlin's independent music scene since 2018. Alongside performing with his alt-rock project Carnivalesque and collaborating with art-rock icon Kat Koan, he writes music for solo guitar.</p>
+        <p>Drawing inspiration from video game composers such as Akira Yamaoka and Nobuo Uematsu, as well as the niche micro-genre Fogcore, his forthcoming EP explores liminal spaces, analog horror, and nostalgia – a sound world that feels both comforting and quietly unsettling.</p>
+      </div>
     </div>
 
     <!-- Concerts tab -->
     <div class="tab-content" id="concerts">
-      <p>
-        20.4.2026 — DNA House (Wrangelstraße 25, Berlin 10997)<br>
+      <p>20.4.2026 — DNA House (Wrangelstraße 25, Berlin 10997)<br>
         EP Release Concert<br><br>
         Start 7pm<br>
         Doors 6:30pm<br><br>
-        Free entry!
-      </p>
+        Free entry!</p>
     </div>
 
-    <!-- Music tab (Releases) -->
+    <!-- Music tab -->
     <div class="tab-content" id="music">
       <div class="release-grid">
         <a href="nervous-system.html">
           <img src="assets/images/nervous-system.jpg" alt="Nervous System">
-          <p>NERVOUS SYSTEM<br>(April 2026)</p>
+          <p>Nervous System (April 2026)</p>
         </a>
-
         <a href="negative-space.html">
           <img src="assets/images/negative-space.jpg" alt="Negative Space">
-          <p>NEGATIVE SPACE<br>(February 2026)</p>
+          <p>Negative Space (February 2026)</p>
         </a>
-
         <a href="skizze.html">
           <img src="assets/images/skizze.jpeg" alt="Skizze">
-          <p>SKIZZE<br>(November 2025)</p>
+          <p>Skizze (November 2025)</p>
         </a>
       </div>
     </div>
@@ -85,7 +85,6 @@
     <!-- Gallery tab -->
     <div class="tab-content" id="gallery">
       <p>Photos by Nora Amparo</p>
-
       <div class="gallery">
         <a href="assets/images/IMG_9272%20(rotiert).JPG" target="_blank">
           <img src="assets/images/IMG_9272%20(rotiert).JPG" alt="IMG 9272 (rotated)">
@@ -115,66 +114,47 @@
     <div class="tab-content" id="contact">
       <p><a href="mailto:macmillan11@msn.com">macmillan11@msn.com</a></p>
     </div>
-  </div>
+  </main>
 
-  <!-- Sidebar tabs -->
-  <div class="tabs">
-    <button class="tab-button active" data-tab="home">Home</button>
-    <button class="tab-button" data-tab="about">About</button>
-    <button class="tab-button" data-tab="concerts">Concerts</button>
-    <button class="tab-button" data-tab="music">Music</button>
-    <button class="tab-button" data-tab="gallery">Gallery</button>
-    <button class="tab-button" data-tab="contact">Contact</button>
-  </div>
+  <!-- VHS effects -->
+  <div class="scanlines"></div>
+  <div class="static-noise"></div>
+  <div class="vignette"></div>
 
-</main>
+  <!-- Tab-switching JavaScript -->
+  <script>
+    const buttons = document.querySelectorAll(".tab-button");
+    const contents = document.querySelectorAll(".tab-content");
+    const logo = document.getElementById('logo-home');
 
-<!-- Tab-switching JavaScript -->
-<script>
-  const buttons = document.querySelectorAll(".tab-button");
-  const contents = document.querySelectorAll(".tab-content");
-  const mainHeading = document.querySelector("h1");
+    // Tab switching
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        buttons.forEach(b => b.classList.remove("active"));
+        button.classList.add("active");
 
-  // Define titles for each tab
-  const tabTitles = {
-    home: "Thomas MacMillan",
-    about: "About — Thomas MacMillan",
-    concerts: "Concerts — Thomas MacMillan",
-    music: "Music — Thomas MacMillan",
-    gallery: "Gallery — Thomas MacMillan",
-    contact: "Contact — Thomas MacMillan"
-  };
+        const tab = button.dataset.tab;
+        contents.forEach(c => {
+          c.classList.toggle("active", c.id === tab);
+        });
 
-  buttons.forEach(button => {
-    button.addEventListener("click", () => {
-      buttons.forEach(b => b.classList.remove("active"));
-      button.classList.add("active");
-
-      const tab = button.dataset.tab;
-      contents.forEach(c => {
-        c.classList.toggle("active", c.id === tab);
+        // Update page title
+        const tabName = tab.charAt(0).toUpperCase() + tab.slice(1);
+        document.title = tab === "home" ? "Thomas MacMillan" : `${tabName} — Thomas MacMillan`;
       });
-
-      // Change the page title (browser tab)
-      document.title = tabTitles[tab];
-      
-      // Optional: Change the main H1 heading too
-      if (tab === "home") {
-        mainHeading.textContent = "Thomas MacMillan";
-      } else if (tab === "about") {
-        mainHeading.textContent = "About";
-      } else if (tab === "concerts") {
-        mainHeading.textContent = "Concerts";
-      } else if (tab === "music") {
-        mainHeading.textContent = "Music";
-      } else if (tab === "gallery") {
-        mainHeading.textContent = "Gallery";
-      } else if (tab === "contact") {
-        mainHeading.textContent = "Contact";
-      }
     });
-  });
-</script>
+
+    // Logo click - return to Home tab
+    if (logo) {
+      logo.addEventListener('click', (e) => {
+        e.preventDefault();
+        const homeButton = document.querySelector('.tab-button[data-tab="home"]');
+        if (homeButton) {
+          homeButton.click();
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>
