@@ -6,35 +6,15 @@
   <title>Thomas MacMillan</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <style>
-    /* Added minimal inline styles to achieve the requested changes */
-    .tabs-nav {
-      border-top: none !important;
-      border-bottom: none !important;
-    }
-    .tab-button {
-      background-color: #e0e0e0;
-      border: 1px solid #ccc;
-      padding: 8px 16px;
-      cursor: pointer;
-      transition: background-color 0.2s;
-    }
-    .tab-button:hover {
-      background-color: #ffffff !important;
-    }
-    .hero-image {
-      margin-top: 20px;
-    }
-  </style>
 </head>
 <body>
 
   <!-- Fixed Header with Logo and Social Icons -->
   <header class="site-header">
     <div class="header-container">
-      <div style="flex:1;"></div> <!-- Left spacer -->
-      <a href="#" class="site-logo" id="logo-home" style="margin:0 auto;">Thomas MacMillan</a>
-      <div class="social-icons" style="flex:1; display:flex; justify-content:flex-end;">
+      <div style="flex:1;"></div> <!-- Left spacer to push logo to center -->
+      <a href="#" class="site-logo" id="logo-home">Thomas MacMillan</a>
+      <div class="social-icons">
         <a href="https://thomasmacmillan.bandcamp.com" target="_blank"><i class="fab fa-bandcamp"></i></a>
         <a href="https://www.instagram.com/tom.macmillan" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://www.tiktok.com/@tommacmillan0" target="_blank"><i class="fab fa-tiktok"></i></a>
@@ -46,12 +26,12 @@
   <!-- Navigation Tabs -->
   <nav class="tabs-nav">
     <div class="tabs-container">
-      <button class="tab-button active" data-tab="home">Home</button>
-      <button class="tab-button" data-tab="about">About</button>
-      <button class="tab-button" data-tab="concerts">Concerts</button>
-      <button class="tab-button" data-tab="music">Music</button>
-      <button class="tab-button" data-tab="gallery">Gallery</button>
-      <button class="tab-button" data-tab="contact">Contact</button>
+      <button class="tab-button active" data-tab="home">HOME</button>
+      <button class="tab-button" data-tab="about">ABOUT</button>
+      <button class="tab-button" data-tab="concerts">CONCERTS</button>
+      <button class="tab-button" data-tab="music">MUSIC</button>
+      <button class="tab-button" data-tab="gallery">GALLERY</button>
+      <button class="tab-button" data-tab="contact">CONTACT</button>
     </div>
   </nav>
 
@@ -63,7 +43,7 @@
       <p>Composer & Guitarist — Berlin</p>
       <br>
       <p>
-        Melodic, atmospheric solo acoustic guitar music
+        Melodic, atmospheric solo acoustic guitar music<br>
         exploring liminal and ambient spaces.
       </p>
       <br>
@@ -71,7 +51,7 @@
       <div class="hero-image">
         <img src="assets/images/your-photo.jpg" alt="Thomas MacMillan">
       </div>
-      <!-- Photo credit added here -->
+      <!-- Photo credit added below hero image -->
       <p style="text-align: right; font-size: 0.8rem; color: #666;">Photo: Nora Amparo</p>
     </div>
 
