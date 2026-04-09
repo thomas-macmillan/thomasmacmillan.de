@@ -29,6 +29,13 @@ body {
   position: relative;
 }
 
+/* FIX: Make all iframes (Spotify, YouTube, etc.) responsive and full-width */
+iframe {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
 /* -------------------------
    Fixed Header
 -------------------------- */
@@ -383,7 +390,6 @@ body {
     max-width: 100%;
   }
 }
-
 
 /* -------------------------
    VHS Effect - Background Only
