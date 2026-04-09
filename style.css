@@ -29,11 +29,16 @@ body {
   position: relative;
 }
 
-/* FIX: Make all iframes (Spotify, YouTube, etc.) responsive and full-width */
+/* Make iframes responsive but preserve their native dimensions */
 iframe {
   max-width: 100%;
-  width: 100%;
   display: block;
+}
+
+/* Allow Spotify embeds to keep their height */
+.spotify-embed iframe {
+  width: 100%;
+  height: 352px;  /* Explicit height for album embed */
 }
 
 /* -------------------------
