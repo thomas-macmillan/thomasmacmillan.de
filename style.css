@@ -29,18 +29,6 @@ body {
   position: relative;
 }
 
-/* Make iframes responsive but preserve their native dimensions */
-iframe {
-  max-width: 100%;
-  display: block;
-}
-
-/* Allow Spotify embeds to keep their height */
-.spotify-embed iframe {
-  width: 100%;
-  height: 352px;  /* Explicit height for album embed */
-}
-
 /* -------------------------
    Fixed Header
 -------------------------- */
