@@ -199,10 +199,36 @@ body {
 /* -------------------------
    Concerts
 -------------------------- */
-#concerts p {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
+.concerts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.concert-item {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #333;
+}
+
+/* Remove border from last item */
+.concert-item:last-child {
+  border-bottom: none;
+}
+
+.concert-date {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #ccc;
+}
+
+.concert-venue {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.concert-details {
+  color: #888;
+  font-size: 0.9rem;
 }
 
 /* -------------------------
