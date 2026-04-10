@@ -349,11 +349,13 @@ body {
   font-size: 0.9rem;
 }
 
+/* FIX: Cards fit their own content height - no stretching */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 1rem;
+  align-items: start;  /* KEY FIX: Prevents cards from stretching to equal height */
 }
 
 .product-card {
@@ -363,6 +365,9 @@ body {
   padding: 1.5rem;
   text-align: center;
   transition: transform 0.2s ease, border-color 0.2s ease;
+  height: auto;  /* Let height be determined by content */
+  display: flex;
+  flex-direction: column;
 }
 
 .product-card:hover {
@@ -377,6 +382,7 @@ body {
   border-radius: 8px;
   margin-bottom: 1rem;
   border: 1px solid #333;
+  align-self: center;
 }
 
 .product-card h3 {
@@ -418,8 +424,9 @@ body {
   font-size: 0.85rem;
   font-family: "VCR OSD Mono", monospace;
   transition: background 0.2s ease, transform 0.1s ease;
-  margin-top: 0.5rem;
+  margin-top: auto;  /* Pushes button to bottom of card */
   border: 1px solid #555;
+  align-self: center;
 }
 
 .payhip-buy-button:hover {
