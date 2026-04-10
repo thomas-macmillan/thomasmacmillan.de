@@ -252,15 +252,31 @@
       });
     });
 
-    if (logo) {
-      logo.addEventListener('click', (e) => {
-        e.preventDefault();
-        const homeButton = document.querySelector('.tab-button[data-tab="home"]');
-        if (homeButton) {
-          homeButton.click();
-        }
-      });
+   if (logo) {
+  logo.addEventListener('click', (e) => {
+    e.preventDefault();
+    // Show home section directly without needing a button
+    const homeSection = document.getElementById('home');
+    const allSections = document.querySelectorAll('.tab-content');
+    const allButtons = document.querySelectorAll('.tab-button');
+    
+    allSections.forEach(section => {
+      section.classList.remove('active');
+    });
+    
+    if (homeSection) {
+      homeSection.classList.add('active');
     }
+    
+    // Remove active class from all buttons
+    allButtons.forEach(btn => {
+      btn.classList.remove('active');
+    });
+    
+    // Update page title
+    document.title = "Thomas MacMillan";
+  });
+}
   </script>
 <script>
   const contactForm = document.getElementById('contact-form');
